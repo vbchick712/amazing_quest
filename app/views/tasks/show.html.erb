@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @task.name %>
+</p>
+
+<p>
+  <strong>Task:</strong>
+  <%= @task.task %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= @task.answer %>
+</p>
+
+<p>
+  <strong>Clue1:</strong>
+  <%= @task.clue1 %>
+</p>
+
+<p>
+  <strong>Clue2:</strong>
+  <%= @task.clue2 %>
+</p>
+
+<p>
+  <strong>Clue3:</strong>
+  <%= @task.clue3 %>
+</p>
+
+<p>
+  <strong>Clue time:</strong>
+  <%= @task.clue_time %>
+</p>
+
+<p>
+  <strong>Answer comment:</strong>
+  <%= @task.answer_comment %>
+</p>
+
+<p>
+  <strong>Skip comment:</strong>
+  <%= @task.skip_comment %>
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>

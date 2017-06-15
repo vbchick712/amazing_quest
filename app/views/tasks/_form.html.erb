@@ -1,0 +1,62 @@
+<%= form_with(model: task, local: true) do |form| %>
+  <% if task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+      <% task.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :task_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :task %>
+    <%= form.text_field :task, id: :task_task %>
+  </div>
+
+  <div class="field">
+    <%= form.label :answer %>
+    <%= form.text_field :answer, id: :task_answer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :clue1 %>
+    <%= form.text_field :clue1, id: :task_clue1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :clue2 %>
+    <%= form.text_field :clue2, id: :task_clue2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :clue3 %>
+    <%= form.text_field :clue3, id: :task_clue3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :clue_time %>
+    <%= form.text_field :clue_time, id: :task_clue_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :answer_comment %>
+    <%= form.text_field :answer_comment, id: :task_answer_comment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :skip_comment %>
+    <%= form.text_field :skip_comment, id: :task_skip_comment %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
