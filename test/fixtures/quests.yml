@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  start_date: MyString
+  start_time: MyString
+  invite_msg: MyString
+  start_msg: MyString
+  final_msg: MyString
+
+two:
+  name: MyString
+  description: MyString
+  start_date: MyString
+  start_time: MyString
+  invite_msg: MyString
+  start_msg: MyString
+  final_msg: MyString

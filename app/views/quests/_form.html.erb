@@ -1,0 +1,52 @@
+<%= form_with(model: quest, local: true) do |form| %>
+  <% if quest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(quest.errors.count, "error") %> prohibited this quest from being saved:</h2>
+
+      <ul>
+      <% quest.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :quest_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :quest_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_date %>
+    <%= form.text_field :start_date, id: :quest_start_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_time %>
+    <%= form.text_field :start_time, id: :quest_start_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :invite_msg %>
+    <%= form.text_field :invite_msg, id: :quest_invite_msg %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_msg %>
+    <%= form.text_field :start_msg, id: :quest_start_msg %>
+  </div>
+
+  <div class="field">
+    <%= form.label :final_msg %>
+    <%= form.text_field :final_msg, id: :quest_final_msg %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

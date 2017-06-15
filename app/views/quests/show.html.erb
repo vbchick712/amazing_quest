@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @quest.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @quest.description %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @quest.start_date %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @quest.start_time %>
+</p>
+
+<p>
+  <strong>Invite msg:</strong>
+  <%= @quest.invite_msg %>
+</p>
+
+<p>
+  <strong>Start msg:</strong>
+  <%= @quest.start_msg %>
+</p>
+
+<p>
+  <strong>Final msg:</strong>
+  <%= @quest.final_msg %>
+</p>
+
+<%= link_to 'Edit', edit_quest_path(@quest) %> |
+<%= link_to 'Back', quests_path %>
