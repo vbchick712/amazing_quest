@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'sessions/new'
 
-  root 'main#index'
+  root 'sessions#new'
   get 'main/index'
 
   resources :roles
