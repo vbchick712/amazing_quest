@@ -7,6 +7,6 @@ class SessionsController < ApplicationController
   	 return render action: 'new' unless @user
 
   	 session[:user_id] = @user.id
-  	 redirect_to notes_path
+  	 redirect_to quests_path
   	end
 end
