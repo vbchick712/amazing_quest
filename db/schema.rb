@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170617183346) do
+ActiveRecord::Schema.define(version: 20170617201441) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,28 @@ ActiveRecord::Schema.define(version: 20170617183346) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "user_role_quests", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "role_id"
+    t.bigint "quest_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["quest_id"], name: "index_user_role_quests_on_quest_id"
+    t.index ["role_id"], name: "index_user_role_quests_on_role_id"
+    t.index ["user_id"], name: "index_user_role_quests_on_user_id"
+  end
+
+  create_table "user_tasks", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "quest_id"
+    t.bigint "task_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["quest_id"], name: "index_user_tasks_on_quest_id"
+    t.index ["task_id"], name: "index_user_tasks_on_task_id"
+    t.index ["user_id"], name: "index_user_tasks_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "password"
@@ -65,4 +87,10 @@ ActiveRecord::Schema.define(version: 20170617183346) do
 
   add_foreign_key "roles", "quests"
   add_foreign_key "roles", "users"
+  add_foreign_key "user_role_quests", "quests"
+  add_foreign_key "user_role_quests", "roles"
+  add_foreign_key "user_role_quests", "users"
+  add_foreign_key "user_tasks", "quests"
+  add_foreign_key "user_tasks", "tasks"
+  add_foreign_key "user_tasks", "users"
 end
