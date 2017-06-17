@@ -1,5 +1,82 @@
 <h1>New Quest</h1>
+<%= form_for @quest do |f| %>
 
-<%= render 'form', quest: @quest %>
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</p>
+
+<p>
+  <%= f.label :start_date %>
+  <%= f.text_field :start_date %>
+</p>
+
+<p>
+  <%= f.label :start_time %>
+  <%= f.text_field :start_time %>
+</p>
+
+<p>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+Note: This is a general description of the quest
+</p>
+
+<p>
+  <%= f.label :invite_message %>
+  <%= f.text_field :invite_message %>
+Note: The participants will see this before they can access the quest so they
+know what to expect. So include any items they might need, such as money,
+umbrella, what to wear, etc.
+</p>
+
+<p>
+  <%= f.label :invite_message %>
+  <%= f.text_field :invite_message %>
+Note: The participants will see this before they can access the quest so they
+know what to expect. So include any items they might need, such as money,
+umbrella, what to wear, etc.
+</p>
+
+<p>
+  <%= f.label :start_message %>
+  <%= f.text_field :start_message %>
+Note: This message will be visible as soon as the start date/time pass. So this
+is where you list the rules of the quest, the goals of the quest, anything you
+want to get your participants motivated! Consider including a link to a secret/closed
+Facebook group just for your quest, or setting a specific hastag for quest
+photos/videos that are uploaded to social media sites, or tell them what to do
+if they get stuck (e.g. Call You!).
+</p>
+
+<p>
+  <%= f.label :final_message %>
+  <%= f.text_field :final_message %>
+Note: This is the final message the participants will see. So use this to
+congratulate them, direct them to a specific location (e.g. party spot), or
+remind them to upload their pics/videos to social media using a specific hashtag
+or in a specific location (you can set up a private Facebook group for the quest,
+for example).
+</p>
+
+<p>Leader:
+<%= f.label :leader %>
+<%= f.text_field :leader %>
+<%= f.label :email %>
+<%= f.text_field :email %>
+</p>
+
+<p>Participant:
+<%= f.label :leader %>
+<%= f.text_field :leader %>
+<%= f.label :email %>
+<%= f.text_field :email %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+<% end %>
+
 
 <%= link_to 'Back', quests_path %>

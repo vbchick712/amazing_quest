@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Task Name:</strong>
   <%= @task.name %>
 </p>
 
@@ -11,39 +11,45 @@
 </p>
 
 <p>
+  <strong>Answer: [insert space to enter an answer here]</strong>
+  <button type="button" name="answer">Check Answer</button>
+</p>
+<!-- <p>
   <strong>Answer:</strong>
   <%= @task.answer %>
-</p>
+</p> -->
 
-<p>
-  <strong>Clue1:</strong>
-  <%= @task.clue1 %>
-</p>
-
-<p>
-  <strong>Clue2:</strong>
-  <%= @task.clue2 %>
-</p>
-
-<p>
-  <strong>Clue3:</strong>
-  <%= @task.clue3 %>
-</p>
-
-<p>
-  <strong>Clue time:</strong>
-  <%= @task.clue_time %>
-</p>
-
-<p>
+<!-- <p>
   <strong>Answer comment:</strong>
   <%= @task.answer_comment %>
+</p> -->
+
+<p>
+  <button type="button" name="clue">Clue 1r</button>
+  <!-- <%= @task.clue1 %> -->
 </p>
 
 <p>
-  <strong>Skip comment:</strong>
-  <%= @task.skip_comment %>
+  <button type="button" name="clue">Clue 1r</button>
+  <!-- <%= @task.clue2 %> -->
 </p>
 
-<%= link_to 'Edit', edit_task_path(@task) %> |
+<p>
+  <button type="button" name="clue">Clue 1r</button>
+  <!-- <%= @task.clue3 %> -->
+</p>
+
+  <!-- <%= @task.clue_time %> -->
+
+<p>
+  <button type="button" name="skip">Skip This Task</button>
+</p>
+
+<!-- <p>
+  <strong>Skip comment:</strong>
+  <%= @task.skip_comment %>
+</p> -->
+
+<p>I don't know if we need any links on this page or not</p>
+<p>Maybe a link to exit quest, ask for help, etc.</p>
 <%= link_to 'Back', tasks_path %>

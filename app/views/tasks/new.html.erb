@@ -1,5 +1,57 @@
 <h1>New Task</h1>
+<%= form_for @task do |f| %>
 
-<%= render 'form', task: @task %>
+<%= @quest.name %>
+
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</p>
+
+<p>
+<%= f.label :task %>
+<%= f.text_field :task %>
+
+<p>
+<%= f.label :clue1 %>
+<%= f.text_field :clue1 %>
+</p>
+
+<p>
+<%= f.label :clue2 %>
+<%= f.label :clue2 %>
+</p>
+
+<p>
+<%= f.label :clue3 %>
+<%= f.label :clue3 %>
+</p>
+
+<p>
+<%= f.label :clue_timer %>
+<%= f.label :clue_timer %>
+</p>
+
+<p>
+<%= f.label :answer %>
+<%= f.label :answer %>
+</p>
+
+<p>insert checkboxes for the answer being exact or accept any answer</p>
+
+<p>
+<%= f.label :answer_comment %>
+<%= f.label :answer_comment %>
+</p>
+
+<p>
+<%= f.label :skip_comment %>
+<%= f.label :skip_comment %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+<% end %>
 
 <%= link_to 'Back', tasks_path %>

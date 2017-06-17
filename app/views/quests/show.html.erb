@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Quest Name:</strong>
   <%= @quest.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Notes from the Questmaster:</strong>
   <%= @quest.description %>
 </p>
 
@@ -20,20 +20,24 @@
   <%= @quest.start_time %>
 </p>
 
+<p>This message will only show before the quest start date/time:</p>
 <p>
   <strong>Invite msg:</strong>
   <%= @quest.invite_msg %>
 </p>
 
+<p>This message will show as soon as the quest start date/time is active:</p>
 <p>
   <strong>Start msg:</strong>
   <%= @quest.start_msg %>
 </p>
 
-<p>
-  <strong>Final msg:</strong>
-  <%= @quest.final_msg %>
-</p>
+<p>Current Progress: [insert % complete or 9/10 tasks completed]</p>
+<p>Set a link to take the Participant to the current active task</p>
+<p>This link will be used in case a user gets dropped from the network or if a quest spans multiple days</p>
 
-<%= link_to 'Edit', edit_quest_path(@quest) %> |
+
 <%= link_to 'Back', quests_path %>
+
+<p>This link needs to be scoped to be only tasks for this quest: </p>
+<%= link_to 'Tasks', tasks_path %>
