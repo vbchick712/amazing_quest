@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-  root 'main#index'
+  root 'sessions#new'
+
+  get 'sessions/new'
   get 'main/index'
 
   resources :roles
   resources :tasks
   resources :quests
   resources :users
+  resources :sessions
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
