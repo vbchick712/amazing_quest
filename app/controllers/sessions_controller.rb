@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
 
     #logged in- hooray!
     session[:user_id] = @user.id
+    Rails.logger.debug("============= #{session}")
     redirect_to dashboard_path
   end
 

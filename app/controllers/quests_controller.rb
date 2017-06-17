@@ -15,7 +15,7 @@ class QuestsController < ApplicationController
 
   # GET /quests/new
   def new
-    @quest = current_user.quests.new
+    @quest = current_user.quests.build
   end
 
   # GET /quests/1/edit

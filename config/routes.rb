@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'sessions#new'
+  # root 'sessions#new'
+  root 'main#index'
 
   get 'sessions/new'
   get 'main/index'
